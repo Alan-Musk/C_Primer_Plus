@@ -5,7 +5,7 @@ int main(void)
 {
     printf("starting now:\n");
     one_three();
-    printf("\ndone!");
+    printf("done!");
 
     return 0;
 }
@@ -13,7 +13,7 @@ void one_three()
 {
     printf("one\n");
     two();
-    printf("three");
+    printf("three\n");
 }
 void two()
 {
