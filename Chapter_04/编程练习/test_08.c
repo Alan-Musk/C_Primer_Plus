@@ -13,9 +13,9 @@ int main(void)
     scanf("%f %f",&miles,&gas);
     printf("您的每加仑汽油行驶的英里数为:%.1f\n",miles/gas);
 
-    volume=gas*GALLON;
-    km=miles*MILES;
-    printf("您的汽车每100公里消耗%.1f升汽油\n",volume/(100*km));
+    // 将每加仑汽油英里数转换为每升汽油行驶的公里数
+    float km_per_liter=(miles/gas)*(MILES/GALLON);
+    printf("您的汽车每100公里消耗%.1f升汽油\n",100/km_per_liter);
 
     return 0;
 }
