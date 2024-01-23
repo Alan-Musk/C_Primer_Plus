@@ -5,15 +5,11 @@
 int main(void)
 {
     int upBorder,lowBorder;
-
-
     printf("请输入打印表格的下上界:");
     scanf("%d %d",&lowBorder,&upBorder);
-
     for(;lowBorder<=upBorder;lowBorder++)
     {
-        printf("该数:%d的平方是%d,立方是%d\n",lowBorder,(int)pow(lowBorder,2),(int)pow(lowBorder,3));
+        printf("该数:%d的平方是%d,立方是%d\n",lowBorder,lowBorder*lowBorder,lowBorder*lowBorder*lowBorder);
     }
-
     return 0;
 }

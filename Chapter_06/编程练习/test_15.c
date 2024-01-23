@@ -6,19 +6,21 @@
 int main(void)
 {
     char letters[255];
-    int i;
-
+    int i=0,k;
+    char in; // 读取的字符
     printf("请输入一串字符:");
-    for(i=0;letters[i-1]!='\n';i++)
-    {
-        scanf("%c",&letters[i]);
+    while(1){
+        scanf("%c",&in);
+        if(i==254 || in=='\n'){
+            break;
+        }
+        letters[i]=in;
+        i++;
     }
-
-    for(;i>=0;i--)
+    for(k=i-1;k>=0;k--)
     {
-        printf("%c",letters[i-2]);
+        printf("%c",letters[k]);
     }
-
     printf("\n");
     return 0;
 }

@@ -5,14 +5,14 @@
 int main(void)
 {
     int nums[8],i;
-    printf("请输入八个整数");
+    printf("请输入八个整数:\n");
     //传入
     for(i=0;i<8;i++)
     {
         scanf("%d",&nums[i]);
     }
     //输出
-    for(i=0;i<8;i++)
+    for(i=7;i>=0;i--)
     {
         printf("%d",nums[i]);
     }

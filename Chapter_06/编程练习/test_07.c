@@ -8,7 +8,7 @@ int main(void)
     int i;
     printf("请输入一个单词:");
     scanf("%s",letters);
-    for(i=strlen(letters);i>=0;i--)
+    for(i=strlen(letters)-1;i>=0;i--)
     {
         printf("%c",letters[i]);
     }
