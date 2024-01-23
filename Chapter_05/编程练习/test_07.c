@@ -9,7 +9,7 @@ int main(void)
     printf("请输入要求的值:");
     scanf("%lf",&num);
 
-    printf("%.1f的立方值是 %.1\nf",num,count(num));
+    printf("%.1f的立方值是 %.1f\n",num,count(num));
 }
 
 float count(double num)

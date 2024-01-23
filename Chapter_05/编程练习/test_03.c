@@ -6,10 +6,13 @@
 int main(void)
 {
     int days;
-    printf("请输入要转换的天数:");
-    scanf("%d",&days);
-
-    printf("%d days are %d week, %d days\n",days,days/DAY_WEEK,days%DAY_WEEK);
-
+    while(1){
+        printf("请输入要转换的天数:");
+        scanf("%d",&days);
+        if(days<=0){
+            break;
+        }
+        printf("%d days are %d week, %d days\n",days,days/DAY_WEEK,days%DAY_WEEK);
+    }
     return 0;
 }

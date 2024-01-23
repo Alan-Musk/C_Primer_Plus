@@ -6,7 +6,7 @@
 //scanf()函数返回读取数据的数量,所以如果读取数字则返回1,如果读取q则不返回1,可以使用==运算符将scanf()的返回值与1作比较,测试是否相当
 #include <stdio.h>
 const double DEGREE=273.16;
-void Temperatures();
+void Temperatures(double degreeH);
 
 int main(void)
 {
@@ -17,7 +17,7 @@ int main(void)
         Temperatures(degreeH);
         printf("输入q或其他非数字时,循环结束.\n");
     }
-
+    printf("成功退出系统！\n");
     return 0;
 
 }
