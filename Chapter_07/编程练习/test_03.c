@@ -20,8 +20,14 @@ int main(void)
             evenTimes++;
         }
     }
-
+    //计算平均值时没有考虑除数为零的情况
+    if(oddTimes==0){
+        printf("没有输入奇数");
+        return 1;
+    }else if(evenTimes==0){
+        printf("没有输入偶数");
+        return 1;
+    }
     printf("偶数有%d次     平均数为%.2f\n奇数有%d次     平均数为%.2lf\n",evenTimes,(double)evenSum/(double)evenTimes,oddTimes,(double)oddSum/(double)oddTimes);
-
     return 0;
 }

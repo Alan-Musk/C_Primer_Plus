@@ -3,7 +3,6 @@
 #include <stdio.h>
 int main(void)
 {
-    int num=0;
     int times=0;
     char first=' ',second=' ';
 
@@ -19,7 +18,6 @@ int main(void)
             {
                 times++;
             }
-            num++;
             second=first;
         }
 

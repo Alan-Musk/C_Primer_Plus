@@ -7,32 +7,25 @@ int main(void)
 {
     unsigned long input;
     unsigned long i;
-    bool isPrime=true;
+    bool isPrime;
 
     printf("请输入要求素数的数:");
     while((scanf("%lu",&input)==1))
     {
-        for(i=2;i*i<=input;i++)
+        for(i=2;i<=input;i++)
         {
-            if(input%i==0)
-            {
-                if((i*i)!=input)
-                {
-                    printf("%lu %lu\n",i,input/i);
+            isPrime=True;
+            for(int j=2;j<=i/2;j++){
+                if(i%j==0){
+                    isPrime=false;
+                    break;
                 }
-                else
-                {
-                    printf("%lu\n",i);
-                }
-                isPrime=false;
             }
-        }
-        if(isPrime)
+            if(isPrime)
             {
-                printf("%lu is prime.\n",input);
+                printf("%lu is prime.\n",i);
             }
         printf("请输入要求素数的数(输入q退出):");
-
         i=0;
     }
     printf("Done!\n");
