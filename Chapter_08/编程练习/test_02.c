@@ -28,7 +28,7 @@ int main(void)
         }
         else if(ch=='\t')
         {
-            printf("\\t--\\t");//制表符处理
+            printf("\\t--\\t\n");//制表符处理
         }
         else
         {

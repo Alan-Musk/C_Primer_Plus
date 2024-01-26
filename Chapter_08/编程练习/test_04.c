@@ -1,35 +1,27 @@
 //编写一个程序,在遇到EOF之前,把输入作为字符流读取.该程序要报告平均每个单词的字母数.不要把空白统计为单词的字母.
-//实际上,标点符号也不应该统计,但是现在暂时不用考虑这么多(如果你在意,考虑使用ctype.h中ispunct()函数)
-// 读者的代码更胜一筹,考虑到最后以字母结尾的情况.例如Hello,My name is alan
 
 #include <stdio.h>
 #include <ctype.h>
-
-
-int main(void)
-{
-    int words=0,letters=0;//单词数和字母数
-    int isWord=0;
+int main(void){
     char ch;
-    while(scanf("%c",&ch)!=EOF)
-    {
-        //获取字母总数
-        if((!ispunct(ch))&&(!isblank(ch)))
-        {
-            letters++;
-            isWord++;
-            if(isWord==1)
-            {
-                words++;
+    int letters=0;// 字母数
+    int words=0;    // 单词数
+    int inWord=0; // 是否在单词中的标志
+    while((ch=getchar())!=EOF){
+        if(isalpha(ch)){            // 如果是字母
+            letters++;//    增加字母计数
+            if(!inWord){
+                inWord=1;   // 标记现在在单词中
+                words++;    // 增加单词计数
             }
+        }else if(inWord){
+            // 如果不是字母且在单词中,则标记不在单词中
+            inWord=0;
         }
-        else
-        {
-            isWord=0;
-        }
-
     }
-    printf("单词数是%d 字母数是%d\n",words,letters);
-
-    return 0;
+    if (words > 0) {
+        printf("平均每个单词的字母数是：%.2f\n", (double)letters / words);
+    } else {
+        printf("没有输入单词。\n");
+    }
 }

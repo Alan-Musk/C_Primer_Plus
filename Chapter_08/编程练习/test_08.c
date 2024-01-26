@@ -41,12 +41,13 @@ int main(void)
             case 'd':
                 printf("Enter first number:");
                 num1=get_number();
-                printf("Enter second number:");
-                num2=get_number();
                 while(num2==0)
                 {
-                    printf("Enter a number other than 0:");
-                    scanf("%f",&num2);
+                    printf("Enter second number:");
+                    num2=get_number();
+                    if(num2==0){
+                        printf("Cannot divide by zero. Please enter a different number.\n");
+                    }
                 }
                 result=num1/num2;
                 printf("%.1f / %.1f = %.1f\n",num1,num2,result);
